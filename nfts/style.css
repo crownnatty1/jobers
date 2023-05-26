@@ -1,0 +1,557 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* border: 0.5px solid red; */
+    background-color: rgb(154, 57, 166);
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* For mobile */
+
+@media only screen and (min-width: 376px) {
+    .row {
+        height: 100%;
+    }
+    .nav {
+        margin-top: 10px;
+    }
+    .search {
+        width: 200px;
+        height: 30px;
+        margin-left: 20px;
+        border-radius: 7px;
+        color: white;
+        caret-color: white;
+        font-size: 18px;
+        border-color: rgb(224, 215, 213);
+        border: 1.5px solid;
+    }
+    .search:focus {
+        outline: none;
+        border-color: rgb(224, 215, 213);
+        border: 2px solid;
+    }
+    .search::placeholder {
+        color: white;
+    }
+    .nav a {
+        padding-left: 15px;
+    }
+    .side-nav {
+        width: 50px;
+        height: 100%;
+        position: fixed;
+        margin-top: 16px;
+        transition: all .5s ease;
+        border-radius: 10px;
+    }
+    .side-nav header {
+        color: white;
+        font-weight: 900;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-top-right-radius: 10px;
+    }
+    .side-nav ul a i {
+        padding-top: 80px;
+    }
+    #check {
+        display: none;
+    }
+    .btn,
+    .cancel {
+        z-index: 1111;
+        position: fixed;
+        margin-left: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+    .btn {
+        left: 20px;
+        top: -2;
+        transition: all .5s;
+        position: fixed;
+    }
+    .cancel {
+        left: 590px;
+        top: 8;
+        transition: all .5s;
+        position: fixed;
+    }
+    #check:checked~.side-nav {
+        left: -100px;
+    }
+    #check:checked~.btn {
+        display: none;
+    }
+    #check:checked~.cancel {
+        display: none;
+    }
+    .profile {
+        background: #E82FFF;
+        /* display: none; */
+    }
+    .profile .edit {
+        margin-left: 330px;
+        width: 25px;
+        background: #E82FFF;
+    }
+    .profile-img {
+        background: #E82FFF;
+    }
+    .profile-img img {
+        width: 70px;
+        height: 70px;
+        border-radius: 30px;
+    }
+    .profile-name {
+        color: white;
+        font-weight: 800;
+        margin-left: 80px;
+        margin-top: -70px;
+        background: #E82FFF;
+    }
+    .profile-address {
+        margin-left: 80px;
+        color: white;
+        font-weight: 800;
+        font-size: 16px;
+        background: #E82FFF;
+    }
+    .profile-ammount {
+        margin-left: 80px;
+        color: white;
+        font-weight: 800;
+        font-size: 16px;
+        background: #E82FFF;
+    }
+    .followers {
+        margin-left: 50px;
+        background: #E82FFF;
+        padding-top: 17px;
+    }
+    .followers table {
+        background: #b230c4;
+        border-color: #b230c4;
+        border-radius: 7px;
+        width: 100px;
+        margin-left: 50px;
+        border-spacing: 5px;
+    }
+    .followers table tr th {
+        /* padding-left: 20px; */
+        background: #b230c4;
+        width: 100px;
+        color: white;
+        font-weight: 900;
+    }
+    .followers table tr td {
+        background: #b230c4;
+        color: white;
+        font-weight: 900;
+    }
+    .about {
+        background: #E82FFF;
+        padding-top: 15px;
+    }
+    .about h3 {
+        color: white;
+        font-weight: 900;
+        padding-left: 17px;
+        background: #E82FFF;
+    }
+    .work-description {
+        color: white;
+        font-weight: 900;
+        padding-top: 7px;
+        background: #E82FFF;
+        border-bottom-color: white;
+        padding-left: 10px;
+    }
+    .work-names {
+        color: white;
+        background: #E82FFF;
+        padding-left: 70px;
+        border-top-color: white;
+        border-bottom-color: white;
+    }
+    .wallet {
+        background: #E82FFF;
+        padding-top: 10px;
+    }
+    .wallet ul {
+        background: #E82FFF;
+        display: flex;
+    }
+    .wallest {
+        margin-left: 5px;
+        background: #E82FFF;
+        color: white;
+        font-weight: 900;
+    }
+    .new-wallets {
+        background: #E82FFF;
+        font-weight: 900;
+        margin-left: 170px;
+    }
+    .new-wallets li {
+        background: #E82FFF;
+    }
+    .w {
+        color: white;
+        font-weight: 900;
+        background: #E82FFF;
+    }
+    .copy {
+        color: white;
+        font-weight: 900;
+        background: #E82FFF;
+    }
+    .copy i {
+        position: absolute;
+        margin-left: 170px;
+        cursor: pointer;
+        margin-top: -1px;
+        background: #E82FFF;
+    }
+    .collection {
+        background: #E82FFF;
+        padding-top: 30px;
+    }
+    .collection ul {
+        background: #E82FFF;
+        display: flex;
+    }
+    .my-collection {
+        color: white;
+        font-weight: 600;
+        margin-left: 5px;
+        background: #E82FFF;
+    }
+    .view-all {
+        font-weight: 600;
+        background: #E82FFF;
+        margin-left: 190px;
+    }
+    .view-all li {
+        background: #E82FFF;
+    }
+    .contains-img {
+        background: #E82FFF;
+    }
+    .contains-img a {
+        padding-left: 10px;
+        background: #E82FFF;
+    }
+    .contains-img a img {
+        margin-top: 10px;
+        border-radius: 10px;
+        background: #E82FFF;
+        width: 100px;
+    }
+    .activities {
+        padding-top: 20px;
+    }
+    .activities a img {
+        width: 80px;
+        border-radius: 37px;
+    }
+    .activities input {
+        position: absolute;
+        width: 250px;
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 35px;
+        border-radius: 8px;
+        border-color: white;
+        border: 2px solid white;
+        color: white;
+        font-size: 16px;
+        font-weight: 100;
+    }
+    .mind::placeholder {
+        color: white;
+        letter-spacing: 2px;
+    }
+    .mind:focus {
+        outline: white;
+    }
+    .navigate {
+        margin-top: 7px;
+    }
+    .navigate a {
+        padding-left: 10px;
+    }
+    .draft {
+        color: white;
+        margin-left: 13px;
+        width: 70px;
+        background: #7a2086;
+        height: 30px;
+        border: none;
+        border-radius: 8px;
+    }
+    .post {
+        margin-left: 10px;
+        color: white;
+        width: 70px;
+        background: #880599;
+        height: 30px;
+        border: none;
+        border-radius: 8px;
+    }
+    .post-activities {
+        padding-top: 10px;
+    }
+    .post-user a img {
+        width: 70px;
+        border-radius: 30px;
+    }
+    .user-name {
+        color: white;
+        font-weight: 500;
+        margin-left: 80px;
+        margin-top: -50px;
+        width: 120px;
+    }
+    .dates {
+        color: white;
+        font-weight: 500;
+        margin-left: 80px;
+    }
+    .follow {
+        color: white;
+        font-weight: 500px;
+        background: #880599;
+        width: 70px;
+        border-radius: 7px;
+        height: 30px;
+        border: none;
+        margin-left: 270px;
+    }
+    .post-user li {
+        margin-left: 350px;
+        width: 10px;
+        margin-top: -20px;
+    }
+    .post-followers {
+        padding-top: 10px;
+    }
+    .tags {
+        background: #880599;
+        height: 30px;
+        width: 70px;
+        margin-left: 10px;
+        border-radius: 7px;
+        border: none;
+    }
+    .tags i {
+        margin-top: 12px;
+        margin-left: 5px;
+    }
+    .post-followers a {
+        padding-top: 10px;
+    }
+    .post-followers a img {
+        width: 60px;
+        border-radius: 30px;
+    }
+    .post-followers a ul {
+        margin-left: 70px;
+        margin-top: -50px;
+        width: 130px;
+    }
+    .post-followers ul li {
+        color: white;
+        font-weight: 500px;
+    }
+    .follow-user {
+        color: white;
+        font-weight: 500px;
+        background: #880599;
+        width: 70px;
+        border-radius: 7px;
+        height: 30px;
+        border: none;
+    }
+    .post-heading {
+        color: white;
+        margin-left: 15px;
+        font-weight: 400;
+    }
+    .post-description {
+        color: white;
+        margin-left: 7px;
+        font-weight: 500;
+    }
+    .main-post {
+        padding-top: 10px;
+        padding-left: 4px;
+    }
+    .main-post a img {
+        width: 350px;
+        border-radius: 10px;
+    }
+    .post-commentors {
+        padding-top: 10px;
+    }
+    .post-commentors a img {
+        width: 20px;
+        border-radius: 30px;
+    }
+    .img-2 {
+        margin-left: -15px;
+    }
+    .img-3 {
+        margin-left: -15px;
+    }
+    .post-commentors a i {
+        margin-left: -13px;
+    }
+    .flash {
+        margin-left: 15px;
+        color: gold;
+        font-weight: 500px;
+    }
+    .num-comment {
+        margin-left: 15px;
+        color: white;
+        font-weight: 500;
+    }
+    .shares {
+        color: white;
+        font-weight: 500;
+        margin-left: 15px;
+    }
+    #btn-emoji {
+        margin-left: 20px;
+    }
+    .emoji {
+        padding-top: 10px;
+        transition: all .5s ease;
+        margin-left: -400px;
+        display: none;
+    }
+    .emoji a {
+        padding-left: 60px;
+    }
+    #btn-emoji:focus~.emoji {
+        margin-left: 10px;
+        display: flex;
+    }
+    .commentor {
+        padding-top: 10px;
+    }
+    .commentor a img {
+        width: 60px;
+        border-radius: 30px;
+    }
+    .input {
+        position: absolute;
+        width: 290px;
+        margin-top: 10px;
+        margin-left: 10px;
+        border-radius: 8px;
+        border: 2px solid white;
+    }
+    .input::placeholder {
+        color: white;
+        padding-top: 10px;
+    }
+    .recent {
+        padding-top: 10px;
+    }
+    .chats {
+        color: white;
+        height: 30px;
+        margin-left: 20px;
+        border-bottom: 3px solid white;
+        font-weight: 700;
+        transition: all .5s ease;
+    }
+    .chats:focus {
+        border-bottom: 3px solid #880599;
+        background: #880599;
+        outline: none;
+    }
+    .recent-activities {
+        color: white;
+        height: 30px;
+        margin-left: 150px;
+        border-bottom: 3px solid white;
+        font-weight: 500;
+        transition: all .5s ease;
+    }
+    .recent-activities:focus {
+        border-bottom: 3px solid #880599;
+        outline: none;
+        background: #880599;
+    }
+    .friends {
+        padding-top: 10px;
+        display: flex;
+        overflow-x: scroll;
+    }
+    .friends a img {
+        width: 65px;
+        border-radius: 30px;
+    }
+    .friends a li {
+        color: white;
+        font-weight: 500;
+    }
+    .chats-message {
+        padding-top: 10px;
+    }
+    .sender {
+        color: white;
+        font-size: 16px;
+        margin-left: 7px;
+        width: 170px;
+        background: #7a2086;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+    .reciever {
+        padding-left: 10px;
+        margin-top: 10px;
+        color: white;
+        font-size: 16px;
+        margin-left: 190px;
+        width: 170px;
+        background: #880599;
+        border: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .message {
+        margin-top: 110px;
+        background: #7a2086;
+    }
+    .message i {
+        padding-left: 15px;
+        background: #7a2086;
+        cursor: pointer;
+    }
+    .write-message {
+        width: 250px;
+        background: #7a2086;
+        color: white;
+        font-size: 14px;
+        font-weight: 400;
+        border: 2px solid white;
+        border-radius: 8px;
+    }
+    .write-message:focus {
+        outline: 2px solid white;
+    }
+}
